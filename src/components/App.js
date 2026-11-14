@@ -8,6 +8,8 @@ const App = () => {
   const handleGenderChange = (e) => {
     const selectedGender = e.target.value;
     setGender(selectedGender);
+
+    // Reset dropdown to the default value
     setSize(selectedGender === "Male" ? "Small" : "2");
   };
 
@@ -46,7 +48,7 @@ const App = () => {
         <select value={size} onChange={(e) => setSize(e.target.value)}>
           {gender === "Male" ? (
             <>
-              <option value="Smale">Small</option>
+              <option value="Small">Small</option>
               <option value="Medium">Medium</option>
               <option value="Large">Large</option>
             </>
